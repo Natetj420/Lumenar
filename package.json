@@ -1,0 +1,27 @@
+{
+  "name": "vite-react-tailwind-app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch-images": "node scripts/fetchImages.js"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^7.3.0",
+    "axios": "^1.9.0",
+    "framer-motion": "^12.10.5",
+    "lucide-react": "^0.509.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.2",
+    "vite": "^6.3.5"
+  }
+}
