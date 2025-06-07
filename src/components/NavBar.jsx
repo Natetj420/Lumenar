@@ -41,8 +41,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4">
-          <nav className="flex flex-col space-y-2 text-gray-700 dark:text-gray-200 font-medium">
+        <div className="md:hidden bg-white px-4 pb-4">
+          <nav className="flex flex-col space-y-2 text-gray-700 font-medium">
             {navItems.map(({ name, path }) => (
               <Link
                 key={name}
