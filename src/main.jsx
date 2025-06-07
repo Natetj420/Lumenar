@@ -8,7 +8,7 @@ import { CartProvider } from './context/CartContext';
 import Checkout from './pages/Checkout'; // ✅ Make sure this import exists
 
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+import Contact from './pages/contact';
 import './index.css';
 import Shop from './pages/Shop';
 import products from "./data/products";
