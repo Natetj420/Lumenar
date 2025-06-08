@@ -12,12 +12,12 @@ export default function ProductDetail() {
   if (!product) return <p>Product not found.</p>;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-20">
+    <div className="min-h-screen bg-white  text-gray-900  px-6 py-20">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
         <img src={product.image} alt={product.name} className="rounded-lg w-full h-auto" />
         <div>
           <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-          <p className="text-purple-600 dark:text-purple-400 text-xl mb-4">{product.price}</p>
+          <p className="text-purple-600  text-xl mb-4">{product.price}</p>
           <p className="mb-6 text-gray-700 dark:text-gray-300">{product.description}</p>
           <button
             onClick={() => addToCart(product)}
