@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow sticky top-0 z-50">
+    <header className="bg-white shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo / Brand */}
         <Link to="/" className="text-2xl font-bold text-purple-600">
@@ -21,7 +21,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-gray-700 dark:text-gray-200 font-medium">
+        <nav className="hidden md:flex space-x-6 text-gray-700  font-medium">
           {navItems.map(({ name, path }) => (
             <Link key={name} to={path} className="hover:text-purple-600 transition">
               {name}
@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-700 dark:text-gray-200"
+          className="md:hidden text-gray-700 "
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
