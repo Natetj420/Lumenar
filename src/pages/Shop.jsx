@@ -45,7 +45,7 @@ export default function Shop() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-20 relative">
+    <div className="min-h-screen bg-gray-100  text-gray-900  px-6 py-20 relative">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-6">Shop All Products</h1>
 
@@ -53,13 +53,13 @@ export default function Shop() {
           <input
             type="text"
             placeholder="Search products..."
-            className="w-full max-w-md px-4 py-3 rounded border dark:bg-gray-800"
+            className="w-full max-w-md px-4 py-3 rounded border "
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
           <select
-            className="px-4 py-3 rounded border dark:bg-gray-800 dark:text-white"
+            className="px-4 py-3 rounded border "
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
           >
@@ -78,7 +78,7 @@ export default function Shop() {
               className={`px-4 py-2 rounded-full border transition text-sm ${
                 activeCategory === cat
                   ? "bg-purple-600 text-white border-purple-600"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-white border-gray-300"
+                  : "bg-white  text-gray-700 dark:text-white border-gray-300"
               }`}
             >
               {cat}
@@ -91,7 +91,7 @@ export default function Shop() {
             <motion.div
               key={product.id}
               whileHover={{ scale: 1.02 }}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+              className="bg-white  rounded-xl overflow-hidden shadow hover:shadow-lg transition"
             >
               <Link to={`/product/${product.id}`}>
                 <img
@@ -103,7 +103,7 @@ export default function Shop() {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-purple-600 dark:text-purple-400 font-medium">{product.price}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{product.description}</p>
+                <p className="text-sm text-gray-600 mb-2">{product.description}</p>
                 <div className="flex gap-2">
                   <motion.button
                     onClick={() => handleAddToCart(product)}
@@ -115,7 +115,7 @@ export default function Shop() {
                   </motion.button>
                   <Link
                     to={`/product/${product.id}`}
-                    className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-50 dark:hover:bg-gray-700 transition text-center"
+                    className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-50 transition text-center"
                   >
                     View
                   </Link>
