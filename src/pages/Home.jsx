@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, Truck, ShieldCheck } from "lucide-react";
 import products from "../data/products"; // ✅ Adjust path if your file structure is different
+import { Link } from "react-router-dom";
 
 
 
@@ -8,46 +9,55 @@ export default function Home() {
   return (   
     <div className="bg-white text-gray-900 ">
    
-     {/* Hero Section */}
+    {/* Hero Section */}
 <section
-  className="relative min-h-screen flex flex-col justify-center items-center pt-20 px-6 text-center overflow-hidden"
+  className="relative flex flex-col justify-center items-center pt-24 pb-16 px-4 sm:px-6
+             text-center overflow-hidden min-h-[80vh] md:min-h-screen"
 >
   {/* background image */}
   <img
     src="/img/hero-1600.webp"
     alt="Modern lighting hero"
-    className="absolute inset-0 h-full w-full object-cover"
+    className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* light gradient overlay (text zone only) */}
-  <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-transparent backdrop-blur-sm" />
+  {/* light gradient overlay (only top-half area on phones, taller on md+) */}
+  <div className="absolute inset-0
+                  bg-gradient-to-b from-white/80 via-white/50 to-transparent
+                  backdrop-blur-[2px] md:backdrop-blur-sm" />
 
-  {/* content */}
-  <div className="relative z-10 flex flex-col items-center max-w-3xl space-y-6">
+  {/* headline, sub, button */}
+  <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 max-w-2xl">
     <motion.h1
-      initial={{ opacity: 0, y: -30 }}
+      initial={{ opacity: 0, y: -25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-gray-900 text-5xl md:text-6xl font-bold tracking-tight drop-shadow-md"
+      transition={{ duration: 0.7 }}
+      className="font-bold tracking-tight drop-shadow-sm
+                 text-4xl sm:text-5xl lg:text-6xl text-gray-900"
     >
       Illuminate&nbsp;Your&nbsp;Space
     </motion.h1>
 
     <motion.p
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4, duration: 0.8 }}
-      className="max-w-xl text-lg md:text-xl text-gray-800 drop-shadow-sm"
+      transition={{ delay: 0.3, duration: 0.7 }}
+      className="max-w-md sm:max-w-lg text-base sm:text-lg md:text-xl
+                 text-gray-800 drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]"
     >
-      Discover premium lighting &amp; decor that transforms your home with modern design.
+      Discover premium lighting&nbsp;&amp; décor that transforms your home with modern design.
     </motion.p>
 
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      className="px-8 py-3 rounded-full bg-purple-600 text-white shadow-lg hover:bg-purple-700 focus:outline-none transition"
-    >
-      Shop&nbsp;Now
-    </motion.button>
+  <Link to="/shop">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    className="mt-2 sm:mt-4 px-6 sm:px-8 py-3
+               rounded-full bg-purple-600 text-white shadow-md
+               hover:bg-purple-700 transition focus:outline-none"
+  >
+    Shop&nbsp;Now
+  </motion.button>
+</Link>
   </div>
 </section>
 
