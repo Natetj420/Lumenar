@@ -8,38 +8,48 @@ export default function Home() {
   return (   
     <div className="bg-white text-gray-900 ">
    
-      {/* Hero Section */}
-        
-<section className="pt-20 min-h-screen flex flex-col justify-center items-center px-6 text-center bg-gradient-to-br from-purple-100 to-white dark:from-gray-800 dark:to-gray-900"
-  style={{
-    backgroundImage: "url('/img/hero-1600.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-  >
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-bold tracking-tight"
-        >
-          Illuminate Your Space
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-4 text-lg md:text-xl max-w-xl"
-        >
-          Discover premium lighting & decor that transforms your home with modern design.
-        </motion.p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          className="mt-6 px-8 py-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 transition"
-        >
-          Shop Now
-        </motion.button>
-      </section>
+     {/* Hero Section */}
+<section
+  className="relative min-h-screen flex flex-col justify-center items-center pt-20 px-6 text-center overflow-hidden"
+>
+  {/* background image */}
+  <img
+    src="/img/hero-1600.webp"
+    alt="Modern lighting hero"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
+
+  {/* light gradient overlay (text zone only) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-transparent backdrop-blur-sm" />
+
+  {/* content */}
+  <div className="relative z-10 flex flex-col items-center max-w-3xl space-y-6">
+    <motion.h1
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-gray-900 text-5xl md:text-6xl font-bold tracking-tight drop-shadow-md"
+    >
+      Illuminate&nbsp;Your&nbsp;Space
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+      className="max-w-xl text-lg md:text-xl text-gray-800 drop-shadow-sm"
+    >
+      Discover premium lighting &amp; decor that transforms your home with modern design.
+    </motion.p>
+
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      className="px-8 py-3 rounded-full bg-purple-600 text-white shadow-lg hover:bg-purple-700 focus:outline-none transition"
+    >
+      Shop&nbsp;Now
+    </motion.button>
+  </div>
+</section>
 
       {/* Value Props */}
       <section className="py-16 px-6 bg-white  grid md:grid-cols-3 gap-10 text-center">
